@@ -1,0 +1,33 @@
+﻿@model List<Nhom4_CuaHangAnPhuoc.Models.SANPHAM>
+@{
+    ViewBag.Title = "ShowProductAoThun";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<br />
+<div class="container text-center">
+    <div class="row">
+        <!--<-->@*div style="text-align: left" class="col-sm-4">
+        </div>*@
+        @*<div class="col-sm-8">*@
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4 col-lg-4 col-md-5">
+                    <div class="product">
+                        <a href="@Url.Action("ShowDetailProduct", "Product", new { id = item.MASP })">
+                            <div>
+                                <img style="width: 225px" src="~/img/Product/@item.ANH" />
+                            </div>
+                        </a>
+                        <div class="figcaption" style="text-align:center">
+                            <div class="text">
+                                <a href="@Url.Action("ShowDetailProduct", "Product", new { id = item.MASP })"><strong>@item.TENSP</strong></a>
+                            </div>
+                            <div class="price">@item.GIA đ</div>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+    </div>
+</div>

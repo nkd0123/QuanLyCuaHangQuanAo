@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="container">
+    <table align="center">
+        <h2 style="text-align:center">Dang Ky</h2>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+    <tr style="height:60px">
+        <td> <label>Ho Ten</label></td>
+        <td>
+            @*@Html.TextBox("HoTenKH")*@
+            <input type="text" name="HoTenKH" class="form-control" />
+
+        </td>
+        <td style="color:red"> @ViewData["Loi1"]</td>
+
+    </tr>
+
+    <tr style="height:60px">
+        <td>Ten Dang Nhap</td>
+        <td>
+            @*@Html.TextBox("TenDN")*@
+            <input type="text" name="TenDN" class="form-control" />
+
+        </td>
+        <td style="color:red"> @ViewData["Loi2"]</td>
+    </tr>
+
+
+    <tr style="height:60px">
+        <td>Mat Khau</td>
+        <td>
+            @*@Html.TextBox("password")*@
+            <input type="password" name="password" class="form-control " />
+
+        </td>
+        <td style="color:red"> @ViewData["Loi3"]</td>
+    </tr>
+
+    <tr style="height:60px">
+        <td>Nhap Lai Mat Khau </td>
+
+        <td>
+            @*@Html.TextBox("RePass")*@
+            <input type="password" name="RePass" class="form-control" />
+
+        </td>
+        <td style="color:red"> @ViewData["Loi4"]</td>
+    </tr>
+
+    <tr style="height:60px">
+        <td>So Dien Thoai</td>
+        <td>
+            @*@Html.TextBox("SDT")*@
+            <input type="text" name="SDT" class="form-control" />
+
+        </td>
+        <td style="color:red"> @ViewData["Loi5"]</td>
+    </tr>
+
+
+    <tr style="height:60px">
+        <td>Email</td>
+        <td>
+            @*@Html.TextBox("email")*@
+            <input type="email" name="email" class="form-control" />
+            
+        </td>
+        <td style="color:red"> @ViewData["Loi6"]</td>
+    </tr>
+
+
+            <tr style="height:60px">
+                <td>Dia Chi</td>
+                <td>
+                    @*@Html.TextBox("diachi")*@
+                    <input type="text" name="diachi" class="form-control" />
+                </td>
+
+            </tr>
+
+
+
+            <tr style="height:40px">
+                <td></td>
+                <td>
+                    <input type="submit" value="Dang Ky" class="btn btn-primary" />
+                </td>
+            </tr>
+        }
+    </table>
+</div>

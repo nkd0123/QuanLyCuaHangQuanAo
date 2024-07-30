@@ -1,0 +1,253 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    font-weight: bold;
+    background-color: black;
+    height:50px;
+    padding: 10px;
+}
+.header  .container .row .col {
+        color: white;
+        margin-left: -100px;
+    }
+
+.header-logo {
+    color: white;
+}
+.header .container
+{
+    height:40px;
+}
+    .header .container .row
+    {
+        height: 40px;
+    }
+    .header .wapper-left a {
+        font-size: 10px;
+        margin-right: 10px;
+        text-decoration: none;
+    }
+.header .wapper-right a {
+    margin-right: 10px;
+}
+.header .wapper-right button
+{
+        font-size: 13px;
+}
+.header .wapper-right button svg
+{
+    margin-top: -3px;
+}
+
+
+.header img {
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -80px;
+            display: block;
+            position: relative;
+        }
+
+.menu {
+    clear: both;
+    background-color: black;
+    width: 100%;
+}
+
+    .menu ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu > ul li {
+        list-style: none;
+        position: relative;
+        z-index: 1;
+    }
+
+        .menu > ul li a {
+            display: block;
+            padding: 0 18px;
+            line-height: 50px;
+            color: #FFF;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: black;
+        }
+
+    .menu ul li a:hover {
+        transition: .3s;
+        color: black;
+        background-color: white;
+        pointer-events: all;
+    }
+
+    .menu ul li ul {
+        position: absolute;
+        width: 150%;
+        display: none;
+        margin-left: -32px;
+    }
+
+
+    .menu li ul {
+        display: none;
+        min-width: 200px;
+        position: absolute;
+    }
+
+    .menu li > ul li {
+        width: 150%;
+        background: #FFF;
+        text-align: left;
+        border-top: 1px solid #FFF;
+    }
+
+    .menu li:hover > ul {
+        display: block;
+    }
+
+    .menu > ul li > ul li > ul {
+        margin-left: 50px;
+        margin-top: -50px;
+    }
+
+    .menu > ul li.has-child::after {
+        font-family: "font awesome 5 free";
+        font-weight: 900;
+        color: #FFF;
+        position: absolute;
+    }
+
+#carouselExampleControls
+{
+    margin-top: -1rem;
+}
+
+.section1
+{
+    width: 60%;
+    margin: auto;
+}
+.section2 {
+    width: 80%;
+    margin: auto;
+}
+.section2 .container .row .right
+{
+    margin-left: -5rem;
+}
+.col-sm-4 
+{
+    width: 240px;
+    margin-bottom: 10px;
+}
+    .col-sm-4 .product {
+        background: white;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        width: 225px;
+    }
+    .zoom-in a .lazyloaded {
+        width: 8rem;
+        border-radius: 20px;
+    }
+.zoom-in {
+    overflow:hidden;
+    transition: .3s all ease-in-out;
+    border-radius: 20px;
+    width: 8rem;
+}
+
+    .zoom-in:hover img {
+        transform: scale(1.13);
+    }
+
+    .zoom-in img {
+        transform: scale(1);
+        transition: .3s all ease-in-out;
+    }
+
+section .container .row .col .container .row-cols-2 .col
+{
+    margin: 5px;
+}
+.figcaption
+{
+    width: 225px;
+}
+.figcaption .text a {
+    color: black;
+}
+
+.section4 .wrapper img {
+    width: 100%;
+    image-rendering: pixelated;
+    opacity: 0.7;
+}
+footer {
+    background-color: #202020;
+    color: white;
+}
+.footer-sup
+{
+    color: black;
+    background:white;
+    padding: 20px 0;
+}
+
+    .footer-sup .align-items-center .col .card a img {
+        height: 150px;
+        width: 250px;
+    }
+footer .footer-top {
+    background: #000000;
+    padding: 10px;
+}
+
+.footer-top .text-center .row .col input {
+    border: 1px solid grey;
+    background: #000000;
+    padding: 10px 20px;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.footer-top .text-center .row .col button {
+    border: 1px solid grey;
+    background: #000000;
+    padding: 10px 20px;
+    color: white;
+    margin-top: 10px;
+}
+    .footer-top .text-center .row .col button:hover {
+        transition: .3s;
+        background: white;
+        color: black;
+        border: 1px solid white;
+    }
+
+footer .footer-mid {
+    padding-top: 30px;
+    text-decoration: none;
+}
+    footer .footer-mid p,a {
+        text-decoration: none;
+        color: white;
+        font-size: 13px;
+    }
+
+
+footer .footer-bottom {
+    text-align: center;
+    line-height: 50px;
+}
+footer .footer-bottom hr
+{
+    margin-top: 20px;
+    margin-bottom:0px;
+}

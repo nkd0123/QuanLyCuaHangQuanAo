@@ -1,0 +1,113 @@
+﻿@model Nhom4_CuaHangAnPhuoc.Models.SANPHAM
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<style>
+    .product-options {
+        --text-opacity: 1;
+        margin-bottom: 1.5rem;
+        padding: 0 0 0.75rem;
+        color: black;
+        color: rgba(153,153,153,var(--text-opacity));
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .product-options a
+    {
+        color: black;
+        padding: 10px;
+        border: 1px solid black;
+    }
+    .product-options .product-option.active, .product-options .product-option:hover 
+    {
+        --bg-opacity: 1;
+        --text-opacity: 1;
+        background-color: #ec1f27;
+        background-color: rgba(236,31,39,var(--bg-opacity));
+        color: #fff;
+        color: rgba(255,255,255,var(--text-opacity));
+    }
+</style>
+<link href="~/css/product.css" rel="stylesheet" />
+
+    <div id="content-wrapper">
+        <div class="column">
+            <div class="view-product">
+                <img id=featured src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7Leigbhsxn21VLeiwTNHbVFsodI2ILlHIenBWyCDTrKJ8W_z9">
+            </div>
+            <div id="slide-wrapper" >
+                <img id="slideLeft" class="arrow" src="https://raw.githubusercontent.com/divanov11/image_slider_frontend/d58ac4296538e0293101d8f21d5041bf2b5cc5a6/images/arrow-left.png">
+
+                <div id="slider">
+                    <img class="thumbnail active" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7Leigbhsxn21VLeiwTNHbVFsodI2ILlHIenBWyCDTrKJ8W_z9">
+                    <img class="thumbnail" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7Leigbhsxn21VLeiwTNHbVFsodI2ILlHIenBWyCDTrKJ8W_z9">
+                    <img class="thumbnail" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSqLjwoax4JzSwsv82y3UNpmHqkOqnwMtmfFGmjwBQBRtBPVpGf">
+                    <img class="thumbnail" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSVhwds5v2poB5KIYDsuMFhq2zViMcYn0wy1AUW0vT_Gm21a8ve">
+                </div>
+
+                <img id="slideRight" class="arrow" src="https://raw.githubusercontent.com/divanov11/image_slider_frontend/d58ac4296538e0293101d8f21d5041bf2b5cc5a6/images/arrow-right.png">
+            </div>
+        </div>
+
+        <div class="column">
+            @Html.HiddenFor(modelItem => Model.MASP)
+            <h1>@Html.DisplayFor(modelItem => Model.TENSP)</h1>
+            <hr>
+            <h3 style="color: red;">@Html.DisplayFor(modelItem => Model.GIA ) đ</h3>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td width="50%">
+                            <div class="text">Kích cỡ</div>
+                        </td>
+                        <td width="50%" class="product-options">
+                            <div class="item size">
+                                <a href="" class="product-option product-option-size active" data-id="441">S</a>
+                                <a href="" class="product-option product-option-size" data-id="442">M</a>
+                                <a href="" class="product-option product-option-size" data-id="443">L</a>
+                                <a href="" class="product-option product-option-size" data-id="444">XL</a>
+                                <a href="" class="product-option product-option-size" data-id="445">2XL</a>
+                                <a href="" class="product-option product-option-size" data-id="446">3XL</a>
+                            </div>
+                            <input type="hidden" class="product-option-input" name="product_attribute_7866_92" value="441">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <ul>
+                <li><a style="color:blue;font-size:16px;" href="#">Hướng dẫn mua hàng</a></li>
+                <li>
+                    Liên hệ tư vấn: <a href="#">Anphuoc.com.vn</a>
+                </li>
+                <li>Xem danh sách cửa hàng: <a href="#">Hệ thống cửa hàng</a></li>
+                <li>
+                    Miễn phí vận chuyển cho đơn từ 1.000.000đ
+                </li>
+                <li>
+                    Chính sách đổi hàng:
+                </li>
+                <li>Màu sắc sản phẩm trên website có thể chêch lệch(không đáng kể) do điều kiện ánh sáng của môi trường và thiết bị công nghệ khác nhau.</li>
+            </ul>
+
+
+            <input style="width: 35px" value ="1" type="number">
+            <a  href="@Url.Action("ThemGioHang", "GioHang", new { @ms = Model.MASP, @strURL = Request.Url.ToString() })"><input type="submit" class="btn btn-primary" value="Thêm vào giỏ hàng" /></a>
+            <hr>
+            <p>Chia sẻ</p>
+            <div class="icon">
+                <a href="">
+
+                </a>
+                <a href="">
+
+                </a>
+                <a href="">
+
+                </a>
+            </div>
+        </div>
+
+    </div>

@@ -1,0 +1,153 @@
+﻿@model List<Nhom4_CuaHangAnPhuoc.Models.SANPHAM>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/img/Banner/193405.png" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/Banner/193513.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/Banner/193544.png" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+<section class="section1">
+    <div style="padding-top: 35px;">
+        <div class="container" style="padding-bottom: 15px; ">
+            <strong>
+                <span style="font-size: 20px">Khám phá các sản phẩm cao cấp từ An Phước - Pierre Cardin </span>
+            </strong>
+            <br>
+        </div>
+    </div>
+    <div  class="container text-center">
+        <div class="row row-cols-5">
+            <div class="col">
+                <div class="zoom-in">
+                    <a target="_self" href="#" title="AN PHUOC"><img class="lazyloaded" src="~/img/Banner//an-phước.jpg"></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="zoom-in">
+                    <a target="_self" href="#" title="AN PHUOC">
+                        <img class="lazyloaded" src="~/img//Banner/pie.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="zoom-in">
+                    <a target="_self" href="#" title="AN PHUOC">
+                        <img class="lazyloaded" src="~/img/Banner/ap-ladies.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="zoom-in">
+                    <a target="_self" href="#" title="AN PHUOC">
+                        <img class="lazyloaded" src="~/img/Banner/900x900_1-01.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="zoom-in">
+                    <a target="_self" href="#" title="AN PHUOC">
+                        <img class="lazyloaded" src="~/img/Banner/900x900_2-01.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section2">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col left">
+                <div style="padding-top: 35px;">
+                    <div class="container" style="padding-bottom: 15px;">
+                        <strong>
+                            <span style="font-size: 20px; ">Today's Outfit</span>
+                        </strong>
+                        <br>
+                    </div>
+
+
+                    <a href="">
+                        <img width="300" class="lazyloaded" src="https://tapchilamdep.com/wp-content/uploads/2019/11/Cac-san-pham-cua-An-Phuoc-rat-sang-trong-va-lich-su.jpg" />
+                    </a>
+                </div>
+            </div>
+            <div class="col right">
+                <div style="padding-top: 35px; text-align: left;">
+                    <div class="container" style="padding-bottom: 15px; ">
+                        <strong>
+                            <span style="font-size: 20px;">Sản phẩm nổi bật </span>
+                        </strong>
+                        <br>
+                    </div>
+
+                    <div class="container text-center">
+                        <div class="row">
+                            @foreach (var item in Model)
+                            {
+                                    <div class="col-6 col-sm-4">
+                                            <div class="product">
+                                                <a href="@Url.Action("ShowDetailProduct", "Product", new { id = item.MASP })">
+                                                    <div>
+                                                        <img style="width: 225px" src="~/img/Product/@item.ANH" />
+                                                    </div>
+                                                </a>
+                                                    <div class="figcaption">
+                                                        <div class="text">
+                                                            <a href="@Url.Action("ShowDetailProduct", "Product", new { id = item.MASP })"><strong>@item.TENSP</strong></a>
+                                                        </div>
+                                                        <div class="price">@item.GIA đ</div>
+                                                    </div>
+                                            </div>
+
+                                    </div>
+                            }
+                            <div class="w-100 d-none d-md-block"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br />
+<section class="section3">
+    <video width="100%" loop="1" autoplay="1" muted="1" name="media">
+        <source src="https://www.anphuoc.com.vn/Data/Sites/1/media/09-collections/deliciae-2022/an-phuoc-4k-for-web.mp4" type="video/mp4">
+    </video>
+    <div class="contaner" style="margin-top: 15px; margin-bottom: 45px;">
+         <div class="caption" style="font-weight: 400;font-family: 'Founders Grotesk Text Regular', Arial, Helvetica, sans-serif;font-size: 2em;letter-spacing: 0.417em;line-height: 2.625em;text-transform: uppercase;color: currentColor;margin-bottom: -0.75em;text-align:center;"> DELICIAE </div>
+         <div class="text" style="text-align: center; margin-left: 20px; margin-right: 20px; padding-top: 15px;">CẢM HỨNG TỪ SỰ TINH TẾ VÀ ĐẲNG CẤP CỦA GIỚI THƯỢNG LƯU LATINH </div>
+         <div class="text" style="text-align: center;  padding-top: 20px;">
+             <a href="" title="Pierre Cardin" style="text-decoration: underline; color: black;text-align: center;">Xem bộ sưu tập</a>
+         </div>      
+    </div>
+</section>
+<section class="section4">
+    <div class="wrapper">
+        <img src="~/img/bando.png" alt="Hệ thống cửa hàng">
+    </div>
+</section>
+
